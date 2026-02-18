@@ -4,6 +4,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useCustomizerStore } from '@/store/customizer-store';
+import { Ban } from 'lucide-react';
 
 export const PreviewDisplay = () => {
     const store = useCustomizerStore();
@@ -43,16 +44,24 @@ export const PreviewDisplay = () => {
             <div className="absolute inset-0 bg-neutral-100 opacity-50 pointer-events-none" />
 
             {/* Main Image Area */}
-            <div className="relative w-full max-w-lg aspect-square transition-transform duration-500 hover:scale-105">
+            <div className="relative w-full max-w-lg aspect-square transition-transform duration-500 hover:scale-105 flex items-center justify-center">
                 {displayImage ? (
-                    <Image
-                        key={displayImage}
-                        src={displayImage}
-                        alt="Preview"
-                        fill
-                        className="object-contain drop-shadow-xl"
-                        priority
-                    />
+                    // specific check for "none" image path if it exists, or handle if displayImage is valid
+                    // But here we want to handle the specific case where we want to show the Ban icon
+                    // faster to just check the store state or if displayImage is a specific value?
+                    // Let's rely on the store state for precision.
+                    (currentStep === 7 && store.secondDecoLocation.id === 'none') ? (
+                        <Ban className="w-32 h-32 text-gray-300" strokeWidth={1} />
+                    ) : (
+                        <Image
+                            key={displayImage}
+                            src={displayImage}
+                            alt="Preview"
+                            fill
+                            className="object-contain drop-shadow-xl"
+                            priority
+                        />
+                    )
                 ) : (
                     <div className="w-full h-full bg-gray-200 flex items-center justify-center rounded-lg">
                         <span className="text-gray-400">No Image Available</span>

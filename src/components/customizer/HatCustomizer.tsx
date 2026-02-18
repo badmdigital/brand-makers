@@ -223,18 +223,18 @@ export const HatCustomizer = () => {
                                             />
                                         </div>
                                     </div>
+                                    <div>
+                                        <label className="block text-xs font-semibold uppercase text-gray-500 mb-1">Company</label>
+                                        <input
+                                            type="text"
+                                            name="company"
+                                            value={formData.company}
+                                            onChange={handleInputChange}
+                                            className="w-full border border-gray-300 rounded-md p-2 text-sm"
+                                            placeholder="Company Name"
+                                        />
+                                    </div>
                                     <div className="grid grid-cols-2 gap-4">
-                                        <div>
-                                            <label className="block text-xs font-semibold uppercase text-gray-500 mb-1">Company</label>
-                                            <input
-                                                type="text"
-                                                name="company"
-                                                value={formData.company}
-                                                onChange={handleInputChange}
-                                                className="w-full border border-gray-300 rounded-md p-2 text-sm"
-                                                placeholder="Company Name"
-                                            />
-                                        </div>
                                         <div>
                                             <label className="block text-xs font-semibold uppercase text-gray-500 mb-1">Order # (Optional)</label>
                                             <input
@@ -246,18 +246,18 @@ export const HatCustomizer = () => {
                                                 placeholder="Old Order #"
                                             />
                                         </div>
-                                    </div>
-                                    <div>
-                                        <label className="block text-xs font-semibold uppercase text-gray-500 mb-1">Est. Quantity *</label>
-                                        <input
-                                            type="number"
-                                            name="quantity"
-                                            value={formData.quantity}
-                                            onChange={handleInputChange}
-                                            className="w-full border border-gray-300 rounded-md p-2 text-sm"
-                                            placeholder="e.g. 50"
-                                            min="1"
-                                        />
+                                        <div>
+                                            <label className="block text-xs font-semibold uppercase text-gray-500 mb-1">Est. Quantity *</label>
+                                            <input
+                                                type="number"
+                                                name="quantity"
+                                                value={formData.quantity}
+                                                onChange={handleInputChange}
+                                                className="w-full border border-gray-300 rounded-md p-2 text-sm"
+                                                placeholder="e.g. 50"
+                                                min="1"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
