@@ -3,10 +3,12 @@ export interface HatOption {
     id: string;
     name: string;
     description?: string;
-    image: string; // Path to associated image
+    image?: string; // Path to associated image
+    hex?: string;   // For colors
 }
 
 export interface HatOptionConfig {
+    colors: HatOption[];
     panelStyles: HatOption[];
     structures: HatOption[];
     fabrics: HatOption[];
@@ -21,6 +23,15 @@ export interface HatOptionConfig {
 const DECO_LOCATION_IMAGE = '/design_assets/decorations/Headwear_Deco Locations.png';
 
 export const HAT_OPTIONS: HatOptionConfig = {
+    colors: [
+        { id: 'black', name: 'Black', hex: '#000000' },
+        { id: 'white', name: 'White', hex: '#FFFFFF' },
+        { id: 'navy', name: 'Navy', hex: '#000080' },
+        { id: 'red', name: 'Red', hex: '#FF0000' },
+        { id: 'grey', name: 'Grey', hex: '#808080' },
+        { id: 'royal', name: 'Royal Blue', hex: '#4169E1' },
+        { id: 'forest', name: 'Forest Green', hex: '#228B22' },
+    ],
     panelStyles: [
         { id: '5-panel', name: '5 Panel', image: '/design_assets/Style Panel/5 Panel Hat.png' },
         { id: '6-panel', name: '6 Panel Trucker', image: '/design_assets/Style Panel/6 Panel Trucker Hat.png' },

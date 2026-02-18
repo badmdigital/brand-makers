@@ -10,7 +10,7 @@ interface Option {
     id: string;
     name: string;
     description?: string;
-    image: string;
+    image?: string;
 }
 
 interface GridSelectorProps {
@@ -45,7 +45,7 @@ export const GridSelector = ({ title, description, options, selectedId, onSelect
                             )}
                         >
                             <div className="relative w-full aspect-[4/3] mb-4 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
-                                {option.id === 'none' ? (
+                                {option.id === 'none' || !option.image ? (
                                     <Ban className="w-16 h-16 text-gray-400 opacity-20" strokeWidth={1.5} />
                                 ) : (
                                     <Image
