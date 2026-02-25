@@ -113,7 +113,7 @@ export async function POST(req: Request) {
         };
 
         // Build webhook payload
-        const webhookUrl = process.env.NEXT_PUBLIC_HL_WEBHOOK_URL;
+        const webhookUrl = process.env.HL_WEBHOOK_URL;
 
         if (!webhookUrl) {
             console.error('HighLevel Webhook URL is not defined in environment variables.');
