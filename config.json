@@ -1,0 +1,27 @@
+{
+  "account_type": "client-custom",
+  "service_tier": "",
+  "business_name": "Brand Makers",
+  "slug": "brand-makers",
+  "port": 4300,
+  "contact_name": "",
+  "contact_email": "",
+  "contact_phone": "",
+  "address": "",
+
+  "ghl_location_id": "",
+  "vercel_project_id": "",
+  "vercel_domain": "",
+
+  "github_repos": {
+    "website": "",
+    "funnels": ""
+  },
+  "local_path": "_Badmouth/clients/brand-makers/",
+
+  "google_analytics_id": "",
+  "cloudflare_zone_id": "",
+  "parent_account_id": "",
+
+  "notes": "Next.js website code lives in website/ subfolder. Migrated 2026-04-16."
+}
